@@ -1,3 +1,32 @@
+# custom
+temp/
+main.pdf
+*_temp.pdf
+
+## distribution files
+.DS_Store
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+node_modules/
+dist/
+thuthesis*.zip
+thuthesis-ctan/
+*_temp.tex
+
+## generated files:
+dtx-style.sty
+thuthesis.cls
+thuthesis.pdf
+thuthesis-example.pdf
+spine.pdf
+*.hd
+
+## test files:
+build/
+testfiles/**/*.pdf
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
@@ -11,6 +40,10 @@
 *.cb
 *.cb2
 .*.lb
+!testfiles/**/*.aux
+!testfiles/**/*.toc
+!testfiles/**/*.lof
+!testfiles/**/*.lot
 
 ## Intermediate documents:
 *.dvi
@@ -109,25 +142,15 @@ acs-*.bib
 *.glo
 *.gls
 *.glsdefs
-*.lzo
-*.lzs
-*.slg
-*.slo
-*.sls
 
 # uncomment this for glossaries-extra (will ignore makeindex's style files!)
 # *.ist
-
-# gnuplot
-*.gnuplot
-*.table
 
 # gnuplottex
 *-gnuplottex-*
 
 # gregoriotex
 *.gaux
-*.glog
 *.gtex
 
 # htlatex
@@ -143,8 +166,8 @@ acs-*.bib
 
 # knitr
 *-concordance.tex
-# TODO Uncomment the next line if you use knitr and want to ignore its generated tikz files
-# *.tikz
+# TODO Comment the next line if you want to keep your tikz graphics files
+*.tikz
 *-tikzDictionary
 
 # listings
@@ -157,6 +180,10 @@ acs-*.bib
 *.idx
 *.ilg
 *.ind
+
+# markdown
+_markdown_*/
+*.markdown.lua
 
 # minitoc
 *.maf
@@ -173,9 +200,6 @@ _minted*
 
 # morewrites
 *.mw
-
-# newpax
-*.newpax
 
 # nomencl
 *.nlg
@@ -195,9 +219,6 @@ _minted*
 
 # scrwfile
 *.wrt
-
-# svg
-svg-inkscape/
 
 # sympy
 *.sout
@@ -270,14 +291,8 @@ TSWLatexianTemp*
 # Kile
 *.backup
 
-# gummi
-.*.swp
-
 # KBibTeX
 *~[0-9]*
-
-# TeXnicCenter
-*.tps
 
 # auto folder when using emacs and auctex
 ./auto/*
@@ -289,13 +304,4 @@ TSWLatexianTemp*
 # standalone packages
 *.sta
 
-# Makeindex log files
-*.lpz
-
-# xwatermark package
-*.xwm
-
-# REVTeX puts footnotes in the bibliography by default, unless the nofootinbib
-# option is specified. Footnotes are the stored in a file with suffix Notes.bib.
-# Uncomment the next line to have this generated file ignored.
-#*Notes.bib
+yarn.lock
